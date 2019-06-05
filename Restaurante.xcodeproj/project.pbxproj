@@ -7,17 +7,53 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		331C0B7B22A7B16E003659C3 /* FacturaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B7A22A7B16E003659C3 /* FacturaTableViewCell.swift */; };
+		331C0B7D22A7B1EF003659C3 /* ProductoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B7C22A7B1EF003659C3 /* ProductoTableViewCell.swift */; };
+		331C0B7F22A7B776003659C3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B7E22A7B776003659C3 /* CollectionViewCell.swift */; };
+		331C0B8122A7B877003659C3 /* MesasCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B8022A7B877003659C3 /* MesasCollectionViewController.swift */; };
+		331C0B8422A7BA7D003659C3 /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B8322A7BA7D003659C3 /* RestClient.swift */; };
+		331C0B8622A7BAF7003659C3 /* OnResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B8522A7BAF7003659C3 /* OnResponse.swift */; };
+		331C0B8822A7BB28003659C3 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B8722A7BB28003659C3 /* Util.swift */; };
+		331C0B8A22A7BCD8003659C3 /* ProductoRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B8922A7BCD8003659C3 /* ProductoRest.swift */; };
+		331C0B8C22A7BDC9003659C3 /* MesaRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B8B22A7BDC9003659C3 /* MesaRest.swift */; };
+		331C0B8E22A7BE5A003659C3 /* FacturaRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B8D22A7BE5A003659C3 /* FacturaRest.swift */; };
+		331C0B9022A7BEAC003659C3 /* UsuarioRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B8F22A7BEAC003659C3 /* UsuarioRest.swift */; };
+		331C0B9222A7BEE3003659C3 /* ComandaRest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B9122A7BEE3003659C3 /* ComandaRest.swift */; };
+		331C0B9722A7BFB6003659C3 /* ProductoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B9622A7BFB6003659C3 /* ProductoTableViewController.swift */; };
+		331C0B9A22A7C03A003659C3 /* Producto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B9922A7C03A003659C3 /* Producto.swift */; };
+		331C0B9C22A7C155003659C3 /* Mesa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B9B22A7C155003659C3 /* Mesa.swift */; };
+		331C0B9E22A7C1BB003659C3 /* Factura.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B9D22A7C1BB003659C3 /* Factura.swift */; };
+		331C0BA022A7C3D5003659C3 /* Comanda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B9F22A7C3D5003659C3 /* Comanda.swift */; };
+		331C0BA222A7C4C9003659C3 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0BA122A7C4C9003659C3 /* Usuario.swift */; };
+		331C0BA522A7C892003659C3 /* FacturaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0BA422A7C892003659C3 /* FacturaTableViewController.swift */; };
 		33F8442D22A68DE4002EE0CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F8442C22A68DE4002EE0CF /* AppDelegate.swift */; };
-		33F8442F22A68DE4002EE0CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F8442E22A68DE4002EE0CF /* ViewController.swift */; };
 		33F8443222A68DE4002EE0CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F8443022A68DE4002EE0CF /* Main.storyboard */; };
 		33F8443422A68DE6002EE0CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F8443322A68DE6002EE0CF /* Assets.xcassets */; };
 		33F8443722A68DE6002EE0CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F8443522A68DE6002EE0CF /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		331C0B7A22A7B16E003659C3 /* FacturaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacturaTableViewCell.swift; sourceTree = "<group>"; };
+		331C0B7C22A7B1EF003659C3 /* ProductoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoTableViewCell.swift; sourceTree = "<group>"; };
+		331C0B7E22A7B776003659C3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		331C0B8022A7B877003659C3 /* MesasCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesasCollectionViewController.swift; sourceTree = "<group>"; };
+		331C0B8322A7BA7D003659C3 /* RestClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		331C0B8522A7BAF7003659C3 /* OnResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnResponse.swift; sourceTree = "<group>"; };
+		331C0B8722A7BB28003659C3 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		331C0B8922A7BCD8003659C3 /* ProductoRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoRest.swift; sourceTree = "<group>"; };
+		331C0B8B22A7BDC9003659C3 /* MesaRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MesaRest.swift; sourceTree = "<group>"; };
+		331C0B8D22A7BE5A003659C3 /* FacturaRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacturaRest.swift; sourceTree = "<group>"; };
+		331C0B8F22A7BEAC003659C3 /* UsuarioRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsuarioRest.swift; sourceTree = "<group>"; };
+		331C0B9122A7BEE3003659C3 /* ComandaRest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComandaRest.swift; sourceTree = "<group>"; };
+		331C0B9622A7BFB6003659C3 /* ProductoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductoTableViewController.swift; sourceTree = "<group>"; };
+		331C0B9922A7C03A003659C3 /* Producto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Producto.swift; sourceTree = "<group>"; };
+		331C0B9B22A7C155003659C3 /* Mesa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mesa.swift; sourceTree = "<group>"; };
+		331C0B9D22A7C1BB003659C3 /* Factura.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Factura.swift; sourceTree = "<group>"; };
+		331C0B9F22A7C3D5003659C3 /* Comanda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comanda.swift; sourceTree = "<group>"; };
+		331C0BA122A7C4C9003659C3 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		331C0BA422A7C892003659C3 /* FacturaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacturaTableViewController.swift; sourceTree = "<group>"; };
 		33F8442922A68DE4002EE0CF /* Restaurante.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurante.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F8442C22A68DE4002EE0CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		33F8442E22A68DE4002EE0CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		33F8443122A68DE4002EE0CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33F8443322A68DE6002EE0CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33F8443622A68DE6002EE0CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -35,9 +71,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		331C0B8222A7BA5E003659C3 /* Clases */ = {
+			isa = PBXGroup;
+			children = (
+				331C0B8322A7BA7D003659C3 /* RestClient.swift */,
+				331C0B8522A7BAF7003659C3 /* OnResponse.swift */,
+				331C0B8722A7BB28003659C3 /* Util.swift */,
+				331C0B8922A7BCD8003659C3 /* ProductoRest.swift */,
+				331C0B8B22A7BDC9003659C3 /* MesaRest.swift */,
+				331C0B8D22A7BE5A003659C3 /* FacturaRest.swift */,
+				331C0B8F22A7BEAC003659C3 /* UsuarioRest.swift */,
+				331C0B9122A7BEE3003659C3 /* ComandaRest.swift */,
+			);
+			path = Clases;
+			sourceTree = "<group>";
+		};
+		331C0B9322A7BF4F003659C3 /* Mesas */ = {
+			isa = PBXGroup;
+			children = (
+				331C0B7E22A7B776003659C3 /* CollectionViewCell.swift */,
+				331C0B8022A7B877003659C3 /* MesasCollectionViewController.swift */,
+			);
+			path = Mesas;
+			sourceTree = "<group>";
+		};
+		331C0B9422A7BF5C003659C3 /* Facturas */ = {
+			isa = PBXGroup;
+			children = (
+				331C0B7A22A7B16E003659C3 /* FacturaTableViewCell.swift */,
+				331C0BA422A7C892003659C3 /* FacturaTableViewController.swift */,
+			);
+			path = Facturas;
+			sourceTree = "<group>";
+		};
+		331C0B9522A7BF6D003659C3 /* Productos */ = {
+			isa = PBXGroup;
+			children = (
+				331C0B7C22A7B1EF003659C3 /* ProductoTableViewCell.swift */,
+				331C0B9622A7BFB6003659C3 /* ProductoTableViewController.swift */,
+			);
+			path = Productos;
+			sourceTree = "<group>";
+		};
+		331C0B9822A7C024003659C3 /* Pojos */ = {
+			isa = PBXGroup;
+			children = (
+				331C0B9922A7C03A003659C3 /* Producto.swift */,
+				331C0B9B22A7C155003659C3 /* Mesa.swift */,
+				331C0B9D22A7C1BB003659C3 /* Factura.swift */,
+				331C0B9F22A7C3D5003659C3 /* Comanda.swift */,
+				331C0BA122A7C4C9003659C3 /* Usuario.swift */,
+			);
+			path = Pojos;
+			sourceTree = "<group>";
+		};
 		33F8442022A68DE4002EE0CF = {
 			isa = PBXGroup;
 			children = (
+				331C0B9822A7C024003659C3 /* Pojos */,
+				331C0B9522A7BF6D003659C3 /* Productos */,
+				331C0B9422A7BF5C003659C3 /* Facturas */,
+				331C0B9322A7BF4F003659C3 /* Mesas */,
+				331C0B8222A7BA5E003659C3 /* Clases */,
 				33F8442B22A68DE4002EE0CF /* Restaurante */,
 				33F8442A22A68DE4002EE0CF /* Products */,
 			);
@@ -55,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				33F8442C22A68DE4002EE0CF /* AppDelegate.swift */,
-				33F8442E22A68DE4002EE0CF /* ViewController.swift */,
 				33F8443022A68DE4002EE0CF /* Main.storyboard */,
 				33F8443322A68DE6002EE0CF /* Assets.xcassets */,
 				33F8443522A68DE6002EE0CF /* LaunchScreen.storyboard */,
@@ -135,8 +229,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33F8442F22A68DE4002EE0CF /* ViewController.swift in Sources */,
+				331C0B9E22A7C1BB003659C3 /* Factura.swift in Sources */,
+				331C0B7F22A7B776003659C3 /* CollectionViewCell.swift in Sources */,
+				331C0B9222A7BEE3003659C3 /* ComandaRest.swift in Sources */,
+				331C0B8822A7BB28003659C3 /* Util.swift in Sources */,
+				331C0BA022A7C3D5003659C3 /* Comanda.swift in Sources */,
+				331C0B7D22A7B1EF003659C3 /* ProductoTableViewCell.swift in Sources */,
+				331C0B9C22A7C155003659C3 /* Mesa.swift in Sources */,
+				331C0BA222A7C4C9003659C3 /* Usuario.swift in Sources */,
+				331C0BA522A7C892003659C3 /* FacturaTableViewController.swift in Sources */,
+				331C0B8E22A7BE5A003659C3 /* FacturaRest.swift in Sources */,
+				331C0B8422A7BA7D003659C3 /* RestClient.swift in Sources */,
+				331C0B9722A7BFB6003659C3 /* ProductoTableViewController.swift in Sources */,
+				331C0B8A22A7BCD8003659C3 /* ProductoRest.swift in Sources */,
+				331C0B9A22A7C03A003659C3 /* Producto.swift in Sources */,
+				331C0B7B22A7B16E003659C3 /* FacturaTableViewCell.swift in Sources */,
+				331C0B8122A7B877003659C3 /* MesasCollectionViewController.swift in Sources */,
+				331C0B9022A7BEAC003659C3 /* UsuarioRest.swift in Sources */,
+				331C0B8C22A7BDC9003659C3 /* MesaRest.swift in Sources */,
 				33F8442D22A68DE4002EE0CF /* AppDelegate.swift in Sources */,
+				331C0B8622A7BAF7003659C3 /* OnResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
