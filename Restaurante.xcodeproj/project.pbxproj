@@ -26,6 +26,7 @@
 		331C0BA022A7C3D5003659C3 /* Comanda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0B9F22A7C3D5003659C3 /* Comanda.swift */; };
 		331C0BA222A7C4C9003659C3 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0BA122A7C4C9003659C3 /* Usuario.swift */; };
 		331C0BA522A7C892003659C3 /* FacturaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 331C0BA422A7C892003659C3 /* FacturaTableViewController.swift */; };
+		33D2C89C22B10BD70086CCE8 /* FacturaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D2C89B22B10BD70086CCE8 /* FacturaViewController.swift */; };
 		33F8442D22A68DE4002EE0CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F8442C22A68DE4002EE0CF /* AppDelegate.swift */; };
 		33F8443222A68DE4002EE0CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33F8443022A68DE4002EE0CF /* Main.storyboard */; };
 		33F8443422A68DE6002EE0CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F8443322A68DE6002EE0CF /* Assets.xcassets */; };
@@ -52,6 +53,7 @@
 		331C0B9F22A7C3D5003659C3 /* Comanda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comanda.swift; sourceTree = "<group>"; };
 		331C0BA122A7C4C9003659C3 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
 		331C0BA422A7C892003659C3 /* FacturaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacturaTableViewController.swift; sourceTree = "<group>"; };
+		33D2C89B22B10BD70086CCE8 /* FacturaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacturaViewController.swift; sourceTree = "<group>"; };
 		33F8442922A68DE4002EE0CF /* Restaurante.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Restaurante.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33F8442C22A68DE4002EE0CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33F8443122A68DE4002EE0CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				331C0B7A22A7B16E003659C3 /* FacturaTableViewCell.swift */,
 				331C0BA422A7C892003659C3 /* FacturaTableViewController.swift */,
+				33D2C89B22B10BD70086CCE8 /* FacturaViewController.swift */,
 			);
 			path = Facturas;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				331C0B7D22A7B1EF003659C3 /* ProductoTableViewCell.swift in Sources */,
 				331C0B9C22A7C155003659C3 /* Mesa.swift in Sources */,
 				331C0BA222A7C4C9003659C3 /* Usuario.swift in Sources */,
+				33D2C89C22B10BD70086CCE8 /* FacturaViewController.swift in Sources */,
 				331C0BA522A7C892003659C3 /* FacturaTableViewController.swift in Sources */,
 				331C0B8E22A7BE5A003659C3 /* FacturaRest.swift in Sources */,
 				331C0B8422A7BA7D003659C3 /* RestClient.swift in Sources */,

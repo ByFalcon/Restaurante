@@ -12,8 +12,6 @@ class ProductoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var labelNomProducto: UILabel!
     @IBOutlet weak var labelCantidadProducto: UILabel!
-    @IBOutlet weak var buttonMenos: UIButton!
-    @IBOutlet weak var buttonMas: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,20 +23,5 @@ class ProductoTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
-    }
-
-    @IBAction func sumarCantidad(_ sender: Any) {
-        var num:Int = Int(labelCantidadProducto.text ?? "0") ?? 0
-        num += 1
-        labelCantidadProducto.text = String(num)
-    }
-    
-    @IBAction func restarCantidad(_ sender: Any) {
-        
-        var num:Int = Int(labelCantidadProducto.text ?? "0") ?? 0
-        if num>0 {
-            num -= 1
-        }
-        labelCantidadProducto.text = String(num)
     }
 }

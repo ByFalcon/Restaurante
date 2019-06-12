@@ -13,9 +13,8 @@
         <!--Detalle-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Restaurante" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="FacturaTableViewCell" customModule="Restaurante" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -106,6 +105,7 @@
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5195.652173913044" y="128.57142857142856"/>
         </scene>
@@ -118,7 +118,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="77" id="5MK-UH-ysU" customClass="ProductoTableViewCell" customModule="Restaurante" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="productoCell" rowHeight="77" id="5MK-UH-ysU" customClass="ProductoTableViewCell" customModule="Restaurante" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="77"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5MK-UH-ysU" id="PEy-kS-UUY">
@@ -126,28 +126,12 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Nombre del producto" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bV3-7a-WS7">
-                                            <rect key="frame" x="28" y="19" width="263" height="39"/>
+                                            <rect key="frame" x="28" y="19" width="163.5" height="39"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n1S-uS-Olp">
-                                            <rect key="frame" x="299" y="19" width="30" height="39"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                            <state key="normal" title="-"/>
-                                            <connections>
-                                                <action selector="restarCantidad:" destination="5MK-UH-ysU" eventType="touchUpInside" id="xea-Ju-1tI"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IKZ-5d-y1u">
-                                            <rect key="frame" x="356" y="19" width="30" height="39"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
-                                            <state key="normal" title="+"/>
-                                            <connections>
-                                                <action selector="sumarCantidad:" destination="5MK-UH-ysU" eventType="touchUpInside" id="y1x-gC-SUD"/>
-                                            </connections>
-                                        </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnB-sU-BQW">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnB-sU-BQW">
                                             <rect key="frame" x="337" y="19" width="11" height="39"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -155,24 +139,14 @@
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="n1S-uS-Olp" secondAttribute="bottom" constant="8" id="3yl-A1-Gx2"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="IKZ-5d-y1u" secondAttribute="trailing" constant="8" id="Fzl-Pb-RhA"/>
-                                        <constraint firstItem="n1S-uS-Olp" firstAttribute="top" secondItem="PEy-kS-UUY" secondAttribute="topMargin" constant="8" id="HcJ-b6-Oad"/>
                                         <constraint firstItem="fnB-sU-BQW" firstAttribute="top" secondItem="PEy-kS-UUY" secondAttribute="topMargin" constant="8" id="O9N-5z-2UB"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="fnB-sU-BQW" secondAttribute="bottom" constant="8" id="Pvd-x2-A1C"/>
-                                        <constraint firstItem="IKZ-5d-y1u" firstAttribute="leading" secondItem="fnB-sU-BQW" secondAttribute="trailing" constant="8" id="SlY-UY-2BI"/>
                                         <constraint firstItem="bV3-7a-WS7" firstAttribute="top" secondItem="PEy-kS-UUY" secondAttribute="topMargin" constant="8" id="UY2-1b-w6e"/>
-                                        <constraint firstItem="fnB-sU-BQW" firstAttribute="leading" secondItem="n1S-uS-Olp" secondAttribute="trailing" constant="8" id="UmW-Wf-DBj"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="bV3-7a-WS7" secondAttribute="bottom" constant="8" id="e0s-Qq-zfD"/>
-                                        <constraint firstItem="n1S-uS-Olp" firstAttribute="leading" secondItem="bV3-7a-WS7" secondAttribute="trailing" constant="8" id="kdH-Rt-UJ5"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="IKZ-5d-y1u" secondAttribute="bottom" constant="8" id="nKz-jb-rcT"/>
                                         <constraint firstItem="bV3-7a-WS7" firstAttribute="leading" secondItem="PEy-kS-UUY" secondAttribute="leadingMargin" constant="8" id="xBD-rh-dhM"/>
-                                        <constraint firstItem="IKZ-5d-y1u" firstAttribute="top" secondItem="PEy-kS-UUY" secondAttribute="topMargin" constant="8" id="xHm-XK-eS3"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="buttonMas" destination="IKZ-5d-y1u" id="NaD-T8-Vhv"/>
-                                    <outlet property="buttonMenos" destination="n1S-uS-Olp" id="jxl-K8-NU1"/>
                                     <outlet property="labelCantidadProducto" destination="fnB-sU-BQW" id="8Mk-B1-pYB"/>
                                     <outlet property="labelNomProducto" destination="bV3-7a-WS7" id="ggd-d5-Y2a"/>
                                 </connections>
@@ -183,9 +157,17 @@
                             <outlet property="delegate" destination="RcK-xb-tfP" id="ro7-VG-k3y"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Productos" id="cJr-tz-gVK"/>
+                    <navigationItem key="navigationItem" title="Productos" id="cJr-tz-gVK">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="jYw-XH-uzJ">
+                            <connections>
+                                <action selector="cancel:" destination="Ibz-fX-Qfi" id="fXA-9k-iQW"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="hAG-vx-9FY"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wwo-m8-odJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Ibz-fX-Qfi" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="7057.971014492754" y="128.57142857142856"/>
         </scene>
@@ -197,21 +179,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BqY-bG-I60">
-                            <size key="itemSize" width="198" height="195"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="BqY-bG-I60">
+                            <size key="itemSize" width="200" height="200"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="celdaMesa" id="198-ep-y7O" customClass="CollectionViewCell" customModule="Restaurante" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" reuseIdentifier="celdaMesa" id="198-ep-y7O" customClass="CollectionViewCell" customModule="Restaurante" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OQV-kw-OyV">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="imagenmesa" translatesAutoresizingMaskIntoConstraints="NO" id="OQV-kw-OyV">
                                             <rect key="frame" x="0.0" y="0.0" width="200" height="163"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PjJ-vZ-Boh">
@@ -235,15 +217,15 @@
                                 <connections>
                                     <outlet property="imagen" destination="OQV-kw-OyV" id="myS-ot-DNB"/>
                                     <outlet property="labelMesa" destination="PjJ-vZ-Boh" id="TNz-Tg-MAq"/>
+                                    <segue destination="MAj-jZ-Tv4" kind="presentation" id="Qqu-vK-Jdh"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="0SW-g5-hzD" id="wPL-Cj-MGX"/>
-                            <outlet property="delegate" destination="0SW-g5-hzD" id="T5X-t9-Cov"/>
-                        </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" title="Mesas" id="6hb-kH-xOb"/>
+                    <connections>
+                        <outlet property="mesaCollectionView" destination="LhJ-Jw-GHJ" id="6gc-m1-Wnz"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nL-sD-bbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -265,7 +247,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8j0-QR-vYP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4271.0144927536239" y="128.57142857142856"/>
+            <point key="canvasLocation" x="4306" y="129"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WIN-s2-mm3">
@@ -304,4 +286,7 @@
             <point key="canvasLocation" x="2515.9420289855075" y="128.57142857142856"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="imagenmesa" width="256" height="256"/>
+    </resources>
 </document>

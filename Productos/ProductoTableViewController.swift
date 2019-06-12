@@ -8,85 +8,73 @@
 
 import UIKit
 
-let productos = [Producto]()
-
-
-class ProductoTableViewController: UITableViewController {
+class ProductoTableViewController: UITableViewController, OnResponse {
+    
+    var productos : [Producto] = []
+    var productoSeleccionado : Producto!
+    var productosInsertar: [Producto] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        //tableView.delegate = self
+        //tableView.dataSource = self
+        print("entra")
+        guard let cliente = RestClient(service: "productos", response: self, [:]) else {
+            print("error")
+            return
+        }
+        print("peticion")
+        cliente.request()
     }
 
-    // MARK: - Table view data source
-
+    func onData(data: Data) {
+        print(String(data:data,encoding:String.Encoding.utf8)!)
+        do {
+            let decoder = JSONDecoder()
+            let productosR = try decoder.decode(Productos.self, from:data)
+            
+            for productoRest in productosR.producto {
+                self.productos.append(Producto(id: productoRest.id, nombre: productoRest.nombre, precio: Double(productoRest.precio) ?? 0.0, destino: productoRest.destino, disponible: Int(productoRest.disponible)))
+            }
+            
+            tableView.reloadData()
+        } catch let parsingError {
+            print("Error", parsingError)
+        }
+    }
+    
+    func onDataError(message: String) {
+        print(message)
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return productos.count
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.productoSeleccionado = productos[indexPath.row]
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "productoCell", for: indexPath) as? ProductoTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+        }
+        var cantidadString: String = (cell.labelCantidadProducto.text ?? "0")
+        var cantidad: Int = Int(cantidadString) ?? 0
+        cantidad+=1
+        cell.labelCantidadProducto.text = "\(cantidad)"
+        productosInsertar.append(productoSeleccionado)
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "productoCell", for: indexPath) as? ProductoTableViewCell  else {
+            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+        }
+        cell.labelNomProducto.text = "\(productos[indexPath.row].getNombre())"
+        cell.labelCantidadProducto.text = "\(productos[indexPath.row].getPrecio())"
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

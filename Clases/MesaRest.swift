@@ -11,10 +11,9 @@ import Foundation
 struct MesaRest: Codable {
     var id: Int
     var localizacion: String
-    var incremento: Double
-    
+    var incremento: String
 }
 
-struct Mesar:Codable {
+struct Mesas:Codable {
     let mesa: [MesaRest]
 }

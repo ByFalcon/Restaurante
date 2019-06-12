@@ -11,7 +11,12 @@ import Foundation
 struct ProductoRest: Codable {
     var id: Int
     var nombre: String
-    var precio: Double
+    var precio: String
     var destino: String
     var disponible: Int
+}
+
+
+struct Productos:Codable {
+    let producto: [ProductoRest]
 }

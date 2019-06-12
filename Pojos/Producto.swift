@@ -16,7 +16,7 @@ class Producto: NSObject {
     var destino: String
     var disponible: Int
     
-    init?(id: Int, nombre: String, precio: Double, destino: String, disponible: Int) {
+    init(id: Int, nombre: String, precio: Double, destino: String, disponible: Int) {
         self.id = id
         self.nombre = nombre
         self.precio = precio
@@ -24,4 +24,43 @@ class Producto: NSObject {
         self.disponible = disponible
     }
     
+    func getId()->Int{
+        return self.id
+    }
+    
+    func setId(id:Int) {
+        self.id = id
+    }
+    
+    func getNombre()->String{
+        return self.nombre
+    }
+    
+    func setNombre(nombre:String) {
+        self.nombre = nombre
+    }
+    
+    func getPrecio()->Double{
+        return self.precio
+    }
+    
+    func setPrecio(precio:Double) {
+        self.precio = precio
+    }
+    
+    func getDestino()->String{
+        return self.destino
+    }
+    
+    func setDestino(destino: String){
+        self.destino = destino
+    }
+    
+    func getDisponible()->Int{
+        return self.disponible
+    }
+    
+    func setDisponible(disponible: Int){
+        self.disponible = disponible
+    }
 }
