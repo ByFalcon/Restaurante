@@ -11,16 +11,14 @@ import Foundation
 class Factura: NSObject {
     
     var id: Int
-    var idMesa: Int
-    var idUsuario: Int
-    var horaApertura: Date
-    var horaCierre: Date
+    var mesa: Mesa
+    var horaApertura: String
+    var horaCierre: String
     var total: Double
     
-    init?(id: Int, idMesa: Int, idUsuario: Int, horaApertura: Date, horaCierre: Date, total: Double) {
+    init(id: Int, mesa: Mesa, horaApertura: String, horaCierre: String, total: Double) {
         self.id = id
-        self.idMesa = idMesa
-        self.idUsuario = idUsuario
+        self.mesa = mesa
         self.horaApertura = horaApertura
         self.horaCierre = horaCierre
         self.total = total

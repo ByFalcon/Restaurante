@@ -48,9 +48,6 @@ class MesasCollectionViewController: UICollectionViewController, OnResponse{
         print(message)
     }
     
-    
-    
-    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int ) -> Int{
         return mesas.count
     }
@@ -66,10 +63,10 @@ class MesasCollectionViewController: UICollectionViewController, OnResponse{
         return celda
     }
     
-    /*override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         
-        guard let DetailViewController = segue.destination as? FacturaTableViewController else {
+        guard let FacturaViewCont = segue.destination as? FacturaViewController else {
             fatalError("Unexpected destination: \(segue.destination)")
         }
         guard let selectedMesaCell = sender as? CollectionViewCell else {
@@ -81,7 +78,7 @@ class MesasCollectionViewController: UICollectionViewController, OnResponse{
         }
         
         let mesaSeleccionada = mesas[indexPath.row]
-        DetailViewController.mesa = mesaSeleccionada
+        FacturaViewCont.mesa = mesaSeleccionada
         
-    }*/
+    }
 }

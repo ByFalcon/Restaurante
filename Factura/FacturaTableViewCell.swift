@@ -10,6 +10,9 @@ import UIKit
 
 class FacturaTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var labelProd: UILabel!
+    @IBOutlet weak var labelPrecio: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

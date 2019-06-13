@@ -11,17 +11,14 @@ import Foundation
 class Comanda: NSObject{
     
     var id: Int
-    var idFactura: Int
-    var idProducto: Int
-    var idUsuario: Int
+    var factura: Factura
+    var producto: Producto
     var precio: Double
     
-    init?(id: Int, idFactura: Int, idProducto: Int, idUsuario: Int, precio: Double) {
+    init(id: Int, factura:Factura, producto: Producto, precio: Double) {
         self.id = id
-        self.idFactura = idFactura
-        self.idProducto = idProducto
-        self.idUsuario = idUsuario
+        self.factura = factura
+        self.producto = producto
         self.precio = precio
     }
-    
 }
