@@ -18,5 +18,5 @@ struct ProductoRest: Codable {
 
 
 struct Productos:Codable {
-    let producto: [ProductoRest]
+    var producto: [ProductoRest]
 }

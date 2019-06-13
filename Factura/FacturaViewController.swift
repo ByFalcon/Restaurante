@@ -40,16 +40,15 @@ class FacturaViewController: UIViewController, UITableViewDataSource, UITableVie
             let facturaCompleta = try decoder.decode(FacturaDetalle.self, from:data)
             
             
-            for facturaDeMesa in facturaCompleta.facturaMesa{
+            for facturaDeMesa in facturaCompleta.factura{
                 self.factura = Factura(id: facturaDeMesa.id, mesa: mesa!, horaApertura: "", horaCierre: facturaDeMesa.horacierre ?? "", total: Double(facturaDeMesa.total) ?? 0.0)
-                
             }
             
-            for productoDeMesa in facturaCompleta.productoMesa{
+            for productoDeMesa in facturaCompleta.producto{
                 productos.append(Producto(id: productoDeMesa.id, nombre: productoDeMesa.nombre, precio: Double(productoDeMesa.precio) ?? 0.0, destino: productoDeMesa.destino, disponible: Int(productoDeMesa.disponible) ))
             }
             var c = 0
-            for comandaDeMesa in facturaCompleta.comandaMesa{
+            for comandaDeMesa in facturaCompleta.comanda{
                 comandas.append(Comanda(id: comandaDeMesa.id, factura: factura!, producto: productos[c], precio: Double(comandaDeMesa.precio) ?? 0))
                 c+=1
             }
@@ -83,6 +82,17 @@ class FacturaViewController: UIViewController, UITableViewDataSource, UITableVie
         cell.labelPrecio.text = "\(productos[indexPath.row].precio)"
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        
+        guard let addProductos = segue.destination as? ProductoTableViewController else {
+            fatalError("Unexpected destination: \(segue.destination)")
+        }
+        addProductos.factura = factura
+        
     }
 
     /*

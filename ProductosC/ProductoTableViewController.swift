@@ -14,6 +14,7 @@ class ProductoTableViewController: UITableViewController, OnResponse {
     var productos : [Producto] = []
     var productosInsertar : [Productos] = []
     var productoSeleccionado : Producto!
+    var factura: Factura?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,7 +57,20 @@ class ProductoTableViewController: UITableViewController, OnResponse {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "productoCelda", for: indexPath) as! ProductoTableViewCell
+
+        let productoInsertar : [String:Any] = ["idfactura": factura?.id ?? 0,
+                                               //"precio" : productos[indexPath.row].precio,
+                                               "idproducto": productos[indexPath.row].id,
+                                               "idusuario": 1]
+        guard let cliente = RestClient(service: "comanda", response: self, [:], "POST", productoInsertar) else {
+            print("error al grabar pedio")
+            return
+        }
+        cliente.request()
+        var num: Int = Int(cell.cantidadProducto.text ?? "0") ?? 0
+        cell.cantidadProducto.text = "\(num+=1)"
+        tableViewController.reloadData()
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

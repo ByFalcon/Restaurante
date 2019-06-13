@@ -10,13 +10,13 @@ import Foundation
 
 struct FacturaDetalle:Codable {
     
-    struct FacturaRes: Codable {
+    struct FacturaRest: Codable {
         var id:Int
         var horacierre : String?
         var total : String
     }
     
-    struct ProductoRes: Codable {
+    struct ProductoRest: Codable {
         var id : Int
         var nombre:String
         var precio : String
@@ -24,16 +24,14 @@ struct FacturaDetalle:Codable {
         var disponible : Int
     }
     
-    
-    
-    struct ComandaRes:Codable {
+    struct ComandaRest:Codable {
         var id : Int
         var precio : String
     }
     
-    let facturaMesa : [FacturaRes]
-    let comandaMesa : [ComandaRes]
-    let productoMesa : [ProductoRes]
+    let factura : [FacturaRest]
+    let comanda : [ComandaRest]
+    let producto : [ProductoRest]
     
     
     
