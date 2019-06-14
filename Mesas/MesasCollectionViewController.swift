@@ -59,7 +59,7 @@ class MesasCollectionViewController: UICollectionViewController, OnResponse{
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let celda: CollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "celdaMesa", for: indexPath) as! CollectionViewCell
-        celda.labelMesa.text = "\(mesas[indexPath.row].getId())"
+        celda.labelMesa.text = "mesa \(mesas[indexPath.row].id)"
         return celda
     }
     
